@@ -4,20 +4,20 @@ pipeline {
     stages {
         stage('setup') {
             steps {
-                echo "setting up"
+                sh "mkdir -p deploy"
             }
-            
         stage('nextStage') {
             steps {
-                  echo "successful"
+                sh """
+                    ls -ltr 
+                    cp abc.txt new.txt
+                """
             }
         }
-            
         stage('anotherStage') {
             steps {
-                echo "script execution is successfull"
+                echo "repeat for all your shell steps"
             }
         }
     }
-
-
+}
