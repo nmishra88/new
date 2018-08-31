@@ -4,16 +4,17 @@ pipeline {
     stages {
         stage('setup') {
             steps {
-                sh "echo `pwd`"
+                sh "
+                    echo `pwd`
+                    "
             }
         stage('nextStage') {
             steps {
-                sh """"
-                    ls -lrth
+                sh "
                     rm a.txt
                     touch abc.txt 
                     echo "abc" > abc.txt
-                   """"
+                   "
             }
         }
         stage('anotherStage') {
