@@ -4,23 +4,20 @@ pipeline {
     stages {
         stage('setup') {
             steps {
-                echo "sh
-                `pwd`"
+                echo "setting up"
             }
+            
         stage('nextStage') {
             steps {
-                sh "
-                    rm a.txt
-                    touch abc.txt 
-                    echo "abc" > abc.txt
-                   "
+                  echo "successful"
             }
         }
+            
         stage('anotherStage') {
             steps {
                 echo "script execution is successfull"
             }
         }
     }
-}
-}
+
+
