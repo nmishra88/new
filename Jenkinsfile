@@ -4,9 +4,8 @@ pipeline {
     stages {
         stage('setup') {
             steps {
-                sh "
-                    echo `pwd`
-                    "
+                echo "sh
+                `pwd`"
             }
         stage('nextStage') {
             steps {
