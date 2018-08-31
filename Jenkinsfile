@@ -8,12 +8,12 @@ pipeline {
             }
         stage('nextStage') {
             steps {
-                sh """
+                sh """"
                     ls -lrth
                     rm a.txt
                     touch abc.txt 
                     echo "abc" > abc.txt
-                   """
+                   """"
             }
         }
         stage('anotherStage') {
@@ -22,4 +22,5 @@ pipeline {
             }
         }
     }
+}
 }
